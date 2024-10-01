@@ -1,16 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="author" content="Jessica Barnett">
-	<meta name="description" content="This is an activity for students as they are first introduced to the DOM in JavaScript">
+	<meta name="description"
+		content="This is an activity for students as they are first introduced to the DOM in JavaScript">
 	<title>JavaScript and the DOM</title>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;800&family=Source+Code+Pro&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;800&family=Source+Code+Pro&display=swap"
+		rel="stylesheet">
 	<link rel="stylesheet" href="styles.css">
+
+	<!-- ---- Link to JS ---- -->
+	<script src="scripts.js" defer></script>
 </head>
+
 <body>
 	<a href="#main-content" id="skip">Skip to Main Content</a>
 	<header>
@@ -22,7 +29,8 @@
 				<li><a href="#tag_name">Selecting Elements By Tag Name</a></li>
 				<li><a href="#class_name">Selecting Elements By Class Name</a></li>
 				<li><a href="#query_all">Selecting Elements By CSS Selector (as a group)</a></li>
-				<li><a href="#query">Selecting Elements By CSS Selector (as the first element that matches on the page)</a></li>
+				<li><a href="#query">Selecting Elements By CSS Selector (as the first element that matches on the
+						page)</a></li>
 				<li><a href="#change">Changing DOM Node Content</a></li>
 				<li><a href="#remove">Removing an Attribute</a></li>
 				<li><a href="https://learn.zybooks.com/zybook/ASUGIT417BarnettSpring2022">View Your zyBook</a></li>
@@ -32,7 +40,9 @@
 	<main>
 		<section id="id_name">
 			<h2>Selecting Elements By ID</h2>
-			<p>To select a single element on the page that has an ID (and only one element on a page can have a given ID at a time), this method exists. In the example below, the element/node on the page with the ID of "mySubmit" would be returned.</p>
+			<p>To select a single element on the page that has an ID (and only one element on a page can have a given ID
+				at a time), this method exists. In the example below, the element/node on the page with the ID of
+				"mySubmit" would be returned.</p>
 			<pre>
 				<code>
 <!-- 			 -->document.getElementById("mySubmit");
@@ -40,14 +50,20 @@
 			</pre>
 			<section>
 				<h3>Get an Element By ID</h3>
-				<p>For this section, use JS to select the element here by its ID and add to the innerHTML a span with a class of "tan" and text inside that span that says "This is new tan text"</p>
+				<p>For this section, use JS to select the element here by its ID and add to the innerHTML a span with a
+					class of "tan" and text inside that span that says "This is new tan text"</p>
 				<p id="firstPara">This is the first paragraph with the id on it on the page.</p>
 			</section>
 		</section>
 		<section id="tag_name">
 			<h2>Selecting Elements By Tag Name</h2>
-			<p>To select all elements on a page with a given HTML tag name as a collection (even if there are zero or one elements on the page with that tag), this method exists. In the example below, all of the paragraphs on the page would be returned as an HTMLCollection (works like an array).</p>
-			<p>Remember, for every element in the DOM, you can access its attributes using the dot operator (.) after selecting it. These attributes can be changed to new values, or you can access them to just see what their current value is. These are referred to as "getters" and "setters." A getter "gets" the value for you but doesn't change it, whereas a setter allows you to set a new value for that attribute.</p>
+			<p>To select all elements on a page with a given HTML tag name as a collection (even if there are zero or
+				one elements on the page with that tag), this method exists. In the example below, all of the paragraphs
+				on the page would be returned as an HTMLCollection (works like an array).</p>
+			<p>Remember, for every element in the DOM, you can access its attributes using the dot operator (.) after
+				selecting it. These attributes can be changed to new values, or you can access them to just see what
+				their current value is. These are referred to as "getters" and "setters." A getter "gets" the value for
+				you but doesn't change it, whereas a setter allows you to set a new value for that attribute.</p>
 			<pre>
 				<code>
 <!-- 			 -->document.getElementsByTagName("p");
@@ -55,15 +71,21 @@
 			</pre>
 			<section id="image_grid">
 				<h3>Select Elements By Tag Name</h3>
-				<p>For this section, select all of these images and change their width from its current setting to 250 pixels</p>
-				<img src="images/code.png" alt="page graphic in blues and tan with bracket icon overload on it"  width="200">
-				<img src="images/laptop.png" alt="laptop graphic in blues, tan and gray with web icon overlaid on it" width="200">
-				<img src="images/programmer.png" alt="person graphic in blues and tan with bracket icon overload on the person's face"  width="200">
+				<p>For this section, select all of these images and change their width from its current setting to 250
+					pixels</p>
+				<img src="images/code.png" alt="page graphic in blues and tan with bracket icon overload on it"
+					width="200">
+				<img src="images/laptop.png" alt="laptop graphic in blues, tan and gray with web icon overlaid on it"
+					width="200">
+				<img src="images/programmer.png"
+					alt="person graphic in blues and tan with bracket icon overload on the person's face" width="200">
 			</section>
 		</section>
 		<section id="class_name">
 			<h2>Selecting Elements By Class Name</h2>
-			<p>To select all elements on a page with a given class as a collection (even if there are zero or one elements on the page with that class), this method exists. In the example below, all of the elements on the page that had the active class would be returned as an HTMLCollection (works like an array).</p>
+			<p>To select all elements on a page with a given class as a collection (even if there are zero or one
+				elements on the page with that class), this method exists. In the example below, all of the elements on
+				the page that had the active class would be returned as an HTMLCollection (works like an array).</p>
 			<pre>
 				<code>
 <!-- 			 -->document.getElementsByClassName("active");
@@ -71,13 +93,26 @@
 			</pre>
 			<section>
 				<h3>Select Elements By Class Name</h3>
-				<p>For the elements below, there are two class names. You will need to select the groups of elements separately, and for the elements with the class "med-blue", add inline styles to change the text color to #3C5E73. For the elements with the class "light-blue" change the text color to #7C9EA6. You can access the inline styles for an element with the dot operator (.) and the attribute name "style" followed by another dot and the style you want to set (in this case, element.style.color).</p>
-				<p>This is just some <span class="light-blue">placeholder text</span>, but it's full of <span class="med-blue">spans</span>. We're going to <span class="light-blue">access</span> those spans using <span class="med-blue">JavaScript</span> and the <span class="light-blue">classes</span> in each span to add some styles to make them <span class="med-blue">stand out</span> on the page. <span class="light-blue">Later in this module</span> we'll learn more about using JS to add and remove classes <span class="med-blue">(which is a better practice than using inline styles)</span> but for today this will be fine.</p>
+				<p>For the elements below, there are two class names. You will need to select the groups of elements
+					separately, and for the elements with the class "med-blue", add inline styles to change the text
+					color to #3C5E73. For the elements with the class "light-blue" change the text color to #7C9EA6. You
+					can access the inline styles for an element with the dot operator (.) and the attribute name "style"
+					followed by another dot and the style you want to set (in this case, element.style.color).</p>
+				<p>This is just some <span class="light-blue">placeholder text</span>, but it's full of <span
+						class="med-blue">spans</span>. We're going to <span class="light-blue">access</span> those spans
+					using <span class="med-blue">JavaScript</span> and the <span class="light-blue">classes</span> in
+					each span to add some styles to make them <span class="med-blue">stand out</span> on the page. <span
+						class="light-blue">Later in this module</span> we'll learn more about using JS to add and remove
+					classes <span class="med-blue">(which is a better practice than using inline styles)</span> but for
+					today this will be fine.</p>
 			</section>
 		</section>
 		<section id="query_all">
 			<h2>Selecting Elements By CSS Selector (as a group)</h2>
-			<p>If you're comfortable with CSS selectors, the two querySelector methods in JS are ideal for finding DOM elements. (They also work similarly to the selectors we use in jQuery, so practicing with these methods is a good idea). This method will return a NodeList (works like an array) of all elements on the page that match the selector.</p>
+			<p>If you're comfortable with CSS selectors, the two querySelector methods in JS are ideal for finding DOM
+				elements. (They also work similarly to the selectors we use in jQuery, so practicing with these methods
+				is a good idea). This method will return a NodeList (works like an array) of all elements on the page
+				that match the selector.</p>
 			<pre>
 				<code>
 <!-- 			 -->document.querySelectorAll("ul li");
@@ -85,42 +120,61 @@
 			</pre>
 			<section id="svgs">
 				<h3>Select Elements by CSS Selector as a Group</h3>
-				<p>Let's select some SVG icons by a CSS selector and change the stroke color on these. For fun, let's create an array of the colors used in our document (find these in the root of the CSS document), and as we iterate through our icons, let's change each one to one of the colors in that array of colors from the document.</p>
-				<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-javascript" viewBox="0 0 24 24" stroke-width="1.5" stroke="#555" fill="none" stroke-linecap="round" stroke-linejoin="round">
-				  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-				  <path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5z" />
-				  <path d="M7.5 8h3v8l-2 -1" />
-				  <path d="M16.5 8h-2.5a0.5 .5 0 0 0 -.5 .5v3a0.5 .5 0 0 0 .5 .5h1.423a0.5 .5 0 0 1 .495 .57l-.418 2.93l-2 .5" />
+				<p>Let's select some SVG icons by a CSS selector and change the stroke color on these. For fun, let's
+					create an array of the colors used in our document (find these in the root of the CSS document), and
+					as we iterate through our icons, let's change each one to one of the colors in that array of colors
+					from the document.</p>
+				<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-javascript"
+					viewBox="0 0 24 24" stroke-width="1.5" stroke="#555" fill="none" stroke-linecap="round"
+					stroke-linejoin="round">
+					<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+					<path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5z" />
+					<path d="M7.5 8h3v8l-2 -1" />
+					<path
+						d="M16.5 8h-2.5a0.5 .5 0 0 0 -.5 .5v3a0.5 .5 0 0 0 .5 .5h1.423a0.5 .5 0 0 1 .495 .57l-.418 2.93l-2 .5" />
 				</svg>
-				<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-javascript" viewBox="0 0 24 24" stroke-width="1.5" stroke="#555" fill="none" stroke-linecap="round" stroke-linejoin="round">
-				  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-				  <path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5z" />
-				  <path d="M7.5 8h3v8l-2 -1" />
-				  <path d="M16.5 8h-2.5a0.5 .5 0 0 0 -.5 .5v3a0.5 .5 0 0 0 .5 .5h1.423a0.5 .5 0 0 1 .495 .57l-.418 2.93l-2 .5" />
+				<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-javascript"
+					viewBox="0 0 24 24" stroke-width="1.5" stroke="#555" fill="none" stroke-linecap="round"
+					stroke-linejoin="round">
+					<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+					<path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5z" />
+					<path d="M7.5 8h3v8l-2 -1" />
+					<path
+						d="M16.5 8h-2.5a0.5 .5 0 0 0 -.5 .5v3a0.5 .5 0 0 0 .5 .5h1.423a0.5 .5 0 0 1 .495 .57l-.418 2.93l-2 .5" />
 				</svg>
-				<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-javascript" viewBox="0 0 24 24" stroke-width="1.5" stroke="#555" fill="none" stroke-linecap="round" stroke-linejoin="round">
-				  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-				  <path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5z" />
-				  <path d="M7.5 8h3v8l-2 -1" />
-				  <path d="M16.5 8h-2.5a0.5 .5 0 0 0 -.5 .5v3a0.5 .5 0 0 0 .5 .5h1.423a0.5 .5 0 0 1 .495 .57l-.418 2.93l-2 .5" />
+				<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-javascript"
+					viewBox="0 0 24 24" stroke-width="1.5" stroke="#555" fill="none" stroke-linecap="round"
+					stroke-linejoin="round">
+					<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+					<path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5z" />
+					<path d="M7.5 8h3v8l-2 -1" />
+					<path
+						d="M16.5 8h-2.5a0.5 .5 0 0 0 -.5 .5v3a0.5 .5 0 0 0 .5 .5h1.423a0.5 .5 0 0 1 .495 .57l-.418 2.93l-2 .5" />
 				</svg>
-				<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-javascript" viewBox="0 0 24 24" stroke-width="1.5" stroke="#555" fill="none" stroke-linecap="round" stroke-linejoin="round">
-				  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-				  <path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5z" />
-				  <path d="M7.5 8h3v8l-2 -1" />
-				  <path d="M16.5 8h-2.5a0.5 .5 0 0 0 -.5 .5v3a0.5 .5 0 0 0 .5 .5h1.423a0.5 .5 0 0 1 .495 .57l-.418 2.93l-2 .5" />
+				<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-javascript"
+					viewBox="0 0 24 24" stroke-width="1.5" stroke="#555" fill="none" stroke-linecap="round"
+					stroke-linejoin="round">
+					<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+					<path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5z" />
+					<path d="M7.5 8h3v8l-2 -1" />
+					<path
+						d="M16.5 8h-2.5a0.5 .5 0 0 0 -.5 .5v3a0.5 .5 0 0 0 .5 .5h1.423a0.5 .5 0 0 1 .495 .57l-.418 2.93l-2 .5" />
 				</svg>
-				<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-javascript" viewBox="0 0 24 24" stroke-width="1.5" stroke="#555" fill="none" stroke-linecap="round" stroke-linejoin="round">
-				  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-				  <path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5z" />
-				  <path d="M7.5 8h3v8l-2 -1" />
-				  <path d="M16.5 8h-2.5a0.5 .5 0 0 0 -.5 .5v3a0.5 .5 0 0 0 .5 .5h1.423a0.5 .5 0 0 1 .495 .57l-.418 2.93l-2 .5" />
+				<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-javascript"
+					viewBox="0 0 24 24" stroke-width="1.5" stroke="#555" fill="none" stroke-linecap="round"
+					stroke-linejoin="round">
+					<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+					<path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5z" />
+					<path d="M7.5 8h3v8l-2 -1" />
+					<path
+						d="M16.5 8h-2.5a0.5 .5 0 0 0 -.5 .5v3a0.5 .5 0 0 0 .5 .5h1.423a0.5 .5 0 0 1 .495 .57l-.418 2.93l-2 .5" />
 				</svg>
 			</section>
 		</section>
 		<section id="query">
 			<h2>Selecting Elements By CSS Selector (as the first element that matches on the page)</h2>
-			<p>This method works similarly to the one above in that it accepts a CSS selector, but it will only return the first element on the page that matches that selector.</p>
+			<p>This method works similarly to the one above in that it accepts a CSS selector, but it will only return
+				the first element on the page that matches that selector.</p>
 			<pre>
 				<code>
 <!-- 			 -->document.querySelector("h2");
@@ -128,13 +182,18 @@
 			</pre>
 			<section>
 				<h3>Select First of Type With JS</h3>
-				<p>In this section, select the first of the spans with the class "bold" and change the text color to the light blue color from our CSS (#7C9EA6).</p>
-				<p>I have a lot of <span class="bold">strong opinions</span> about <span class="bold">bold text</span>. The querySelector method will only select the first of these <span class="bold">spans</span> with the bold class on it though.</p>
+				<p>In this section, select the first of the spans with the class "bold" and change the text color to the
+					light blue color from our CSS (#7C9EA6).</p>
+				<p>I have a lot of <span class="bold">strong opinions</span> about <span class="bold">bold text</span>.
+					The querySelector method will only select the first of these <span class="bold">spans</span> with
+					the bold class on it though.</p>
 			</section>
 		</section>
 		<section id="change">
 			<h2>Changing DOM Node Content</h2>
-			<p>With the innerHTML method, we can add both text and HTML tag content to a DOM node on our page. With the textContent method, we can add just plain text content to a DOM node on the page. For form elements like inputs, the text they contain is actually accessed using the "value" attribute.</p>
+			<p>With the innerHTML method, we can add both text and HTML tag content to a DOM node on our page. With the
+				textContent method, we can add just plain text content to a DOM node on the page. For form elements like
+				inputs, the text they contain is actually accessed using the "value" attribute.</p>
 			<pre>
 				<code>
 <!-- 			 -->document.querySelector("h1").textContent = "New H1 Text";
@@ -144,7 +203,8 @@
 			</pre>
 			<section>
 				<h3>Changing and Adding to Existing Content</h3>
-				<p>For the first list item below, replace the text with some that says "this is new list item text." For the third list item below, add your name to the existing text, but wrap it in some strong tags.</p>
+				<p>For the first list item below, replace the text with some that says "this is new list item text." For
+					the third list item below, add your name to the existing text, but wrap it in some strong tags.</p>
 				<ul class="content_list">
 					<li>This is the first list item</li>
 					<li>This is the second list item</li>
@@ -156,7 +216,9 @@
 		</section>
 		<section id="remove">
 			<h2>Removing an Attribute</h2>
-			<p>The removeAttribute() method allows you to completely remove an attribute from an element by passing in the attribute name. In the book, you'll usually see this used to remove the "hidden" attribute from an element.</p>
+			<p>The removeAttribute() method allows you to completely remove an attribute from an element by passing in
+				the attribute name. In the book, you'll usually see this used to remove the "hidden" attribute from an
+				element.</p>
 			<pre>
 				<code>
 <!-- 				-->document.getElementById("mySubmit").removeAttribute("name");
@@ -164,7 +226,9 @@
 			</pre>
 			<section>
 				<h3>Remove an Attribute</h3>
-				<p>If you inspect the HTML or view the file, you can see that there is a link below that has the hidden attribute on it. Use JavaScript to remove that attribute so that you can see that element display on the page.</p>
+				<p>If you inspect the HTML or view the file, you can see that there is a link below that has the hidden
+					attribute on it. Use JavaScript to remove that attribute so that you can see that element display on
+					the page.</p>
 				<span><a href="#" hidden>This Link Was Hidden</a></span>
 			</section>
 		</section>
@@ -174,4 +238,5 @@
 		<p>For Educational Purposes Only</p>
 	</footer>
 </body>
+
 </html>
